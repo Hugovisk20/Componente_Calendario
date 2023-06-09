@@ -1,0 +1,111 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+
+    --White: #fff;
+    --Ghost-White: #F5F3F7;
+
+    --Dim-Gray: #666;
+    --Davys-Gray: #4A4A4A;
+    --Jet: #333;
+
+    --Thistle: #D6C6E1;
+    --Amethyst: #9A73B5;
+    --Amethyst-2: #8B5FBF;
+    --Rebecca-Purple: #61398F;
+    
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Lato";
+}
+
+/*MAIN DA PÀGINA*/
+
+.main{
+    height: 100vh;
+    min-height: 100vh;
+}
+.article{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    color: var(--Jet);
+}
+.article__icon{
+    padding: 1rem;
+    border-radius: 50%;
+    columns: var(--Dim-Gray);
+    cursor: pointer;
+    transition: all .1s ease;
+}
+.article__icon:hover{
+    background-color: var(--Thistle);
+}
+.article__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*div 'box'*/
+.article__content{
+    padding: 3.2rem;
+
+    background-color: var(--White);
+    box-shadow: 0 .8rem 3.2rem rgba(0, 0, 0, .16);
+    border-radius: 1.6rem;
+
+    width: fit-content;
+}
+#app{
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    gap: 2.4rem;
+}
+.article__body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+.article__body > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8.2rem;
+    height: 4rem;
+    color: var(--Dim-Gray);
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.article__body > div:hover{
+    background-color: var(--Thistle);
+}
+.article__body > div.div__active{position: relative;
+    background-color: var(--Rebecca-Purple);
+    font-weight: 700;
+    color: var(--White);
+}
+.article__body > div.div__active::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: .4rem;
+    height: .4rem;
+    background-color: var(--White);
+    border-radius: 50%;
+    bottom: 15%;
+}
